@@ -1,0 +1,12 @@
+body{
+    background-image: url(https://i.pinimg.com/originals/4e/d9/3a/4ed93a925416e114dd4f9657e9121c1b.jpg);
+    background-size: 1600px;
+    background-repeat: no-repeat;
+}
+.principal{
+    background-color: rgba(102, 102, 102, 0.432);
+}
+
+main {
+    height: 100vh;
+}

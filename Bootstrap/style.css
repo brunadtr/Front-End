@@ -1,0 +1,41 @@
+@media (max-width: 575px)
+{
+    .principal{
+        background-color: red;
+    }
+}
+
+@media (min-width: 576px)
+{
+    .principal{
+        background-color: blue;
+    }
+}
+
+@media (min-width: 768px)
+{
+    .principal{
+        background-color: violet;
+    }
+}
+
+@media (min-width: 992px)
+{
+    .principal{
+        background-color:fuchsia;
+    }
+}
+
+@media (min-width: 1200px)
+{
+    .principal{
+        background-color: skyblue;
+    }
+}
+
+@media (min-width: 1400px)
+{
+    .principal{
+        background-color: lightgreen;
+    }
+}

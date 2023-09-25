@@ -1,0 +1,7 @@
+:root{
+    --primary: #912020;
+}
+
+.text-primary{
+    color: var(--primary) !important;
+}

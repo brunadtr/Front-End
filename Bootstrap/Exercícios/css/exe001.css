@@ -1,0 +1,30 @@
+.principal{
+    background-repeat: no-repeat;
+}
+@media (min-width: 768px)
+{
+    .principal{
+        background-image: url(/Bootstrap/Exercícios/css/img/iphone.webp);
+    }
+}
+
+@media (min-width: 992px)
+{
+    .principal{
+        background-image: url(/Bootstrap/Exercícios/css/img/ipad.jpg);
+    }
+}
+
+@media (min-width: 1200px)
+{
+    .principal{
+        background-image: url(/Bootstrap/Exercícios/css/img/mackbook.jpg);
+    }
+}
+
+@media (min-width: 1400px)
+{
+    .principal{
+        background-image: url(/Bootstrap/Exercícios/css/img/televisao.jpg);
+    }
+}

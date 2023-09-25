@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body class="container pt-5 ">
+    <!--Com bootstrap-->
+    <!--
+        01 - Tipo primary com cor do texto black
+        02 - Tipo danger com cor do texto dark
+        03 - Tipo Warning
+        04 - Tipo info com cor do texto secondary e o background do texto sucess
+
+        Crie botões usando elemnetos da tag "a" e do tipo input "submit"
+        05 - Tag "a": tipo primary
+        06 - Tag input "submit": tipo sucess
+
+        Crie botões do tipo Outline
+        07 - Botão do tipo primary
+        08 - Botão do tipo warning 
+
+        Crie um botão ocupando uma linha inteira
+        09 - Do tipo outline sucess, larger e margin top 3
+    -->
+
+    <!-- 01 --> <button type="button" class="btn btn-primary text-black">Primary</button>
+    <!-- 02 --> <button type="button" class="btn btn-danger text-black">Danger</button>
+    <!-- 03 --> <button type="button" class="btn btn-warning">Warning</button>
+    <!-- 04 --> <button type="button" class="btn btn-info bg-success text-secondary">Comprar</button>
+    <!-- 05 --> <a href="#" class="btn btn-primary">Botão a</a>
+    <!-- 06 --> <input type="submit" value="Botão input" class="btn btn-success">
+    <!-- 07 --> <button type="button" class="btn btn-outline-primary">Outline</button>
+    <!-- 08 --> <button type="button" class="btn btn-outline-warning">Outline</button>
+    <!-- 09 -->
+    <div class="d-grid gap-2 mt-3">
+        <button class="btn btn-outline-success btn-lg" type="button">Button</button>
+    </div>
+    
+    <div class="d-grid">
+       <!-- 25% --> <button type="button" class="btn btn-outline-primary w-25 p-3 mt-3">25%</button>
+       <!-- 50% --> <button type="button" class="btn btn-outline-warning w-50 p-3 mt-3">50%</button>
+       <!-- 75% --> <button type="button" class="btn btn-outline-danger w-75 p-3 mt-3">75%</button>
+    </div>
+
+    <!--Criando um boxModel-->
+    <h1>boxModel</h1>
+    <hr>
+    <div class="display-1 bg-warning border border-primary border-5">
+        BoxModel
+    </div>
+    <div class="display-1 bg-warning border border-primary border-5 rounded-5 text-center mt-3">
+        BoxModel
+    </div>
+</body>
+
+</html>

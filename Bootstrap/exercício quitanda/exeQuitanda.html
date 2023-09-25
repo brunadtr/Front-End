@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quitanda</title>
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!--Icones-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<style>
+    body{
+        background-color: rgb(241, 214, 255);
+    }
+</style>
+<body>
+    <nav class="navbar bg-danger navbar-expand-sm">
+        <div class="container">
+            <a href="#" class="navbar-brand text-light">
+                <h4> <strong>Quitanda Online</strong> </h4>
+            </a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+
+            <div class="navbar-collapse collapse justify-content-end" id="menu">
+                <a href="/Bootstrap/exercício quitanda/exeQuitanda.html" class="nav-link text-light me-4">Principal</a>
+                <div class="dropdown">
+                    <a href="#" class="nav-link dropdown-toggle text-light me-3 " data-bs-toggle="dropdown">Contatos</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="/Bootstrap/exercício quitanda/entreEmContato.html" class="dropdown-item"><i
+                                    class="bi bi-whatsapp text-success"></i> Whatsapp </a>
+                        </li>
+                        <li>
+                            <a href="Bootstrap/02_SiteResponsivo.html" class="dropdown-item"><i
+                                    class="bi bi-instagram text-danger "></i> Instagram </a>
+                        </li>
+                        <li>
+                            <a href="Bootstrap/03_Icones.html" class="dropdown-item"><i
+                                    class="bi bi-facebook text-primary"></i> Facebook </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="navbar-nav">
+                    <a href="/Bootstrap/exercício quitanda/cadastro.html" class="nav-link text-light">Cadastro</a>
+                    <a href="/Bootstrap/exercício quitanda/login.html" class="nav-link text-light">Entrar</a>
+                    <a class="col-2 col-lg-4" href="/Bootstrap/exercício quitanda/carrinho.html"><button class=" rounded bg-body-secondary border border-info"><i
+                            class="bi bi-cart-check-fill text-info"></i></i></button></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!--Sessão do carrossel-->
+        <section id="meucarrossel" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <!--Indicadores do banner-->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#meucarrossel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#meucarrossel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#meucarrossel" data-bs-slide-to="2"></button>
+            </div>
+            <!--Lista de imagens - Banners-->
+            <div class="carousel-inner">
+                <!--Imagem-->
+                <div class="carousel-item active" data-bs-interval="1000">
+                    <img src="/Bootstrap/exercício quitanda/img/slides/slide01.jpg" class="w-100 d-block">
+                </div>
+                <!--Imagem 2 -->
+                <div class="carousel-item" data-bs-interval="1000">
+                    <img src="/Bootstrap/exercício quitanda/img/slides/slide01.jpg" class="w-100 d-block">
+                </div>
+                <!--Imagem 3-->
+                <div class="carousel-item" data-bs-interval="1000">
+                    <img src="/Bootstrap/exercício quitanda/img/slides/slide01.jpg" class="w-100 d-block">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#meucarrossel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon text-danger"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#meucarrossel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
+        </section>
+
+        <hr>
+        <div class="col-12 d-flex justify-content-between align-items-center ">
+            <div class="d-flex">
+                <input type="text" placeholder="Digite aqui o que você procura" class="form-control  col-12 col-lg-6">
+                <button class="bg-danger border border-0 rounded ">Buscar</button>
+            </div>
+
+            <div class="d-flex align-items-center ">
+                <ul class="pagination justify-content-center me-3 mt-3">
+                    <li class="page-item">
+                        <a href="#" class="page-link text-secondary">1</a>
+                    </li>
+                    <li class="page-item">
+                        <a href="#" class="page-link">2</a>
+                    </li>
+                    <li class="page-item">
+                        <a href="#" class="page-link">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a href="#" class="page-link">4</a>
+                    </li>
+                    <li class="page-item">
+                        <a href="#" class="page-link">5</a>
+                    </li>
+                </ul>
+                <select class="form-select">
+                    <option>Ordenar pelo nome</option>
+                    <option>Ordenar pelo menor preço</option>
+                    <option>Ordenar pelo maior preço</option>
+                </select>
+            </div>
+        </div>
+
+        <hr>
+
+        <section class="row gap-0 mt-3">
+            <!--1 card-->
+            <div class="col-12 col-md-4 col-lg-4 col-xl-2 mb-3">
+                <div class="card border border-danger">
+                    <img data-bs-toggle="modal" data-bs-target="#imagemModal"
+                        src="/Bootstrap/exercício quitanda/img/produtos/000001.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title bg-danger-subtle border border-danger">Banana Prata</h5>
+                        <p class="card-text">Melhor qualidade</p>
+                        <div>
+                            <h3>R$4,50</h3>
+                            <a href="/Bootstrap/exercício quitanda/produto.html"><button class="btn btn-danger">Clique para ver produto</button></a>
+                            <p class="card-text text-success text-center">400kg no estoque</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="imagemModal">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="bg-danger-subtle">Banana Prata</h5>
+                            <button class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <img class="img-fluid" src="/Bootstrap/exercício quitanda/img/produtos/000001.jpg">
+                            <p>Banana Prata madura</p>
+                            <p>Melhor Qualidade</p>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-between">
+                            <h4>R$4,50</h4>
+                            <button class="btn btn-danger" data-bs-dismiss="modal">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--2 card-->
+            <div class="col-12 col-md-4 col-lg-4 col-xl-2 mb-3">
+                <div class="card border border-danger">
+                    <img data-bs-toggle="modal" data-bs-target="#imagemAbacaxi"
+                        src="/Bootstrap/exercício quitanda/img/produtos/000002.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title bg-danger-subtle border border-danger">Abacaxi</h5>
+                        <p class="card-text">Melhor qualidade</p>
+                        <div>
+                            <h3>R$10,99</h3>
+                            <button class="btn btn-danger">Adicionar ao carrinho</button>
+                            <p class="card-text text-success text-center">400kg no estoque</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="imagemAbacaxi">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="bg-danger-subtle">Abacaxi</h5>
+                            <button class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <img class="img-fluid" src="/Bootstrap/exercício quitanda/img/produtos/000002.jpg">
+                            <p>Abacaxi</p>
+                            <p>Melhor Qualidade</p>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-between">
+                            <h4>R$10,99</h4>
+                            <button class="btn btn-danger" data-bs-dismiss="modal">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--3 card-->
+            <div class="col-12 col-md-4 col-lg-4 col-xl-2 mb-3">
+                <div class="card border border-danger">
+                    <img data-bs-toggle="modal" data-bs-target="#imagemMamao"
+                        src="/Bootstrap/exercício quitanda/img/produtos/000003.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title bg-danger-subtle border border-danger">Mamão</h5>
+                        <p class="card-text">Melhor qualidade</p>
+                        <div>
+                            <h3>R$7,89</h3>
+                            <button class="btn btn-danger">Adicionar ao carrinho</button>
+                            <p class="card-text text-success text-center">400kg no estoque</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="imagemMamao">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="bg-danger-subtle">Mamão</h5>
+                            <button class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <img class="img-fluid" src="/Bootstrap/exercício quitanda/img/produtos/000003.jpg">
+                            <p>Mamão</p>
+                            <p>Melhor Qualidade</p>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-between">
+                            <h4>R$4,50</h4>
+                            <button class="btn btn-danger" data-bs-dismiss="modal">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--4 card-->
+            <div class="col-12 col-md-4 col-lg-4 col-xl-2 mb-3">
+                <div class="card border border-danger">
+                    <img data-bs-toggle="modal" data-bs-target="#imagemMaca"
+                        src="/Bootstrap/exercício quitanda/img/produtos/000004.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title bg-danger-subtle border border-danger">Maçã</h5>
+                        <p class="card-text">Melhor qualidade</p>
+                        <div>
+                            <h3>R$3,48</h3>
+                            <button class="btn btn-danger">Adicionar ao carrinho</button>
+                            <p class="card-text text-success text-center">400kg no estoque</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="imagemMaca">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="bg-danger-subtle">Maçã</h5>
+                            <button class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <img class="img-fluid" src="/Bootstrap/exercício quitanda/img/produtos/000004.jpg">
+                            <p>Maçã madura</p>
+                            <p>Melhor Qualidade</p>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-between">
+                            <h4>R$3,48</h4>
+                            <button class="btn btn-danger" data-bs-dismiss="modal">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--5 card-->
+            <div class="col-12 col-md-4 col-lg-4 col-xl-2 mb-3">
+                <div class="card border border-danger">
+                    <img data-bs-toggle="modal" data-bs-target="#imagemGoiaba"
+                        src="/Bootstrap/exercício quitanda/img/produtos/000005.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title bg-danger-subtle border border-danger">Goiaba</h5>
+                        <p class="card-text">Melhor qualidade</p>
+                        <div>
+                            <h3>R$5,50</h3>
+                            <button class="btn btn-danger">Adicionar ao carrinho</button>
+                            <p class="card-text text-success text-center">400kg no estoque</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="imagemGoiaba">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="bg-danger-subtle">Goiaba</h5>
+                            <button class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <img class="img-fluid" src="/Bootstrap/exercício quitanda/img/produtos/000005.jpg">
+                            <p>Goiaba madura</p>
+                            <p>Melhor Qualidade</p>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-between">
+                            <h4>R$5,50</h4>
+                            <button class="btn btn-danger" data-bs-dismiss="modal">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--6 card-->
+            <div class="col-12 col-md-4 col-lg-4 col-xl-2 mb-3">
+                <div class="card border border-danger">
+                    <img data-bs-toggle="modal" data-bs-target="#imagemLaranja"
+                        src="/Bootstrap/exercício quitanda/img/produtos/000006.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title bg-danger-subtle border border-danger">Laranja</h5>
+                        <p class="card-text">Melhor qualidade</p>
+                        <div class="bg-danger-subtle">
+                            <h5 class="text-center">Produto esgotado</h5>
+                            <p class="card-text text-danger text-center">Reposição de estoque</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="imagemLaranja">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="bg-danger-subtle">Laranja</h5>
+                            <button class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <img class="img-fluid" src="/Bootstrap/exercício quitanda/img/produtos/000006.jpg">
+                            <p>Laranja madura</p>
+                            <p>Melhor Qualidade</p>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-between">
+                            <h4 class="text-danger">Produto Esgotado</h4>
+                            <button class="btn btn-danger" data-bs-dismiss="modal"><i
+                                    class="bi bi-bookmark-x text-light "></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!--2 linha-->
+        <section class="row gap-0 mt-3">
+            <!--1 card-->
+            <div class="col-12 col-md-4 col-lg-4 col-xl-2 mb-3">
+                <div class="card border border-danger">
+                    <img data-bs-toggle="modal" data-bs-target="#imagemAbacate"
+                        src="/Bootstrap/exercício quitanda/img/produtos/000007.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title bg-danger-subtle border border-danger"> Abacate</h5>
+                        <p class="card-text">Melhor qualidade</p>
+                        <div>
+                            <h3>R$7,50</h3>
+                            <button class="btn btn-danger">Adicionar ao carrinho</button>
+                            <p class="card-text text-success text-center">400kg no estoque</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="imagemAbacate">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="bg-danger-subtle">Abacate</h5>
+                            <button class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <img class="img-fluid" src="/Bootstrap/exercício quitanda/img/produtos/000007.jpg">
+                            <p>Abacate maduro</p>
+                            <p>Melhor Qualidade</p>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-between">
+                            <h4>R$7,50</h4>
+                            <button class="btn btn-danger" data-bs-dismiss="modal">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--2 card-->
+            <div class="col-12 col-md-4 col-lg-4 col-xl-2 mb-3">
+                <div class="card border border-danger">
+                    <img data-bs-toggle="modal" data-bs-target="#imagemAvocado"
+                        src="/Bootstrap/exercício quitanda/img/produtos/000008.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title bg-danger-subtle border border-danger">Avocado</h5>
+                        <p class="card-text">Melhor qualidade</p>
+                        <div class="bg-danger-subtle">
+                            <h5 class="text-center">Produto esgotado</h5>
+                            <p class="card-text text-danger text-center">Reposição de estoque</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="imagemAvocado">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="bg-danger-subtle">Avocado</h5>
+                            <button class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <img class="img-fluid" src="/Bootstrap/exercício quitanda/img/produtos/000008.jpg">
+                            <p>Avocado maduro</p>
+                            <p>Melhor Qualidade</p>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-between">
+                            <h4 class="text-danger">Produto Esgotado</h4>
+                            <button class="btn btn-danger" data-bs-dismiss="modal"><i
+                                    class="bi bi-bookmark-x text-light "></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--3 card-->
+            <div class="col-12 col-md-4 col-lg-4 col-xl-2 mb-3">
+                <div class="card border border-danger">
+                    <img data-bs-toggle="modal" data-bs-target="#imagemCabotia"
+                        src="/Bootstrap/exercício quitanda/img/produtos/000009.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title bg-danger-subtle border border-danger">Abóbora Cabotia</h5>
+                        <p class="card-text">Melhor qualidade</p>
+                        <div>
+                            <h3>R$12,99</h3>
+                            <button class="btn btn-danger">Adicionar ao carrinho</button>
+                            <p class="card-text text-success text-center">400kg no estoque</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="imagemCabotia">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="bg-danger-subtle">Abóbora Cabotia</h5>
+                            <button class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <img class="img-fluid" src="/Bootstrap/exercício quitanda/img/produtos/000009.jpg">
+                            <p>Abóbora Cabotia madura</p>
+                            <p>Melhor Qualidade</p>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-between">
+                            <h4>R$12,99</h4>
+                            <button class="btn btn-danger" data-bs-dismiss="modal">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--4 card-->
+            <div class="col-12 col-md-4 col-lg-4 col-xl-2 mb-3">
+                <div class="card border border-danger">
+                    <img data-bs-toggle="modal" data-bs-target="#imagemAbobora"
+                        src="/Bootstrap/exercício quitanda/img/produtos/000010.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title bg-danger-subtle border border-danger">Abóbora da terra</h5>
+                        <p class="card-text">Melhor qualidade</p>
+                        <div>
+                            <h3>R$9,89</h3>
+                            <button class="btn btn-danger">Adicionar ao carrinho</button>
+                            <p class="card-text text-success text-center">400kg no estoque</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="imagemAbobora">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="bg-danger-subtle">Abóbora da terra</h5>
+                            <button class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <img class="img-fluid" src="/Bootstrap/exercício quitanda/img/produtos/000010.jpg">
+                            <p>Abóbora da terra madura</p>
+                            <p>Melhor Qualidade</p>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-between">
+                            <h4>R$9,89</h4>
+                            <button class="btn btn-danger" data-bs-dismiss="modal">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--5 card-->
+            <div class="col-12 col-md-4 col-lg-4 col-xl-2 mb-3">
+                <div class="card border border-danger">
+                    <img data-bs-toggle="modal" data-bs-target="#imagemRepolho"
+                        src="/Bootstrap/exercício quitanda/img/produtos/000011.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title bg-danger-subtle border border-danger">Repolho</h5>
+                        <p class="card-text">Melhor qualidade</p>
+                        <div>
+                            <h3>R$2,50</h3>
+                            <button class="btn btn-danger">Adicionar ao carrinho</button>
+                            <p class="card-text text-success text-center">400kg no estoque</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="imagemRepolho">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="bg-danger-subtle">Repolho</h5>
+                            <button class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <img class="img-fluid" src="/Bootstrap/exercício quitanda/img/produtos/000011.jpg">
+                            <p>Repolho maduro</p>
+                            <p>Melhor Qualidade</p>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-between">
+                            <h4>R$2,50</h4>
+                            <button class="btn btn-danger" data-bs-dismiss="modal">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--6 card-->
+            <div class="col-12 col-md-4 col-lg-4 col-xl-2 mb-3">
+                <div class="card border border-danger">
+                    <img data-bs-toggle="modal" data-bs-target="#imagemAlho"
+                        src="/Bootstrap/exercício quitanda/img/produtos/000012.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title bg-danger-subtle border border-danger">Alho</h5>
+                        <p class="card-text">Melhor qualidade</p>
+                        <div>
+                            <h3>R$1,19</h3>
+                            <button class="btn btn-danger">Adicionar ao carrinho</button>
+                            <p class="card-text text-success text-center">400kg no estoque</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="imagemAlho">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="bg-danger-subtle">Alho</h5>
+                            <button class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <img class="img-fluid" src="/Bootstrap/exercício quitanda/img/produtos/000012.jpg">
+                            <p>Alho maduro</p>
+                            <p>Melhor Qualidade</p>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-between">
+                            <h4>R$1,19</h4>
+                            <button class="btn btn-danger" data-bs-dismiss="modal">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="mt-4">
+
+        </section>
+        <div class="d-flex align-items-center ">
+            <ul class="pagination justify-content-center me-3 mt-3">
+                <li class="page-item">
+                    <a href="#" class="page-link text-secondary">1</a>
+                </li>
+                <li class="page-item">
+                    <a href="#" class="page-link">2</a>
+                </li>
+                <li class="page-item">
+                    <a href="#" class="page-link">3</a>
+                </li>
+                <li class="page-item">
+                    <a href="#" class="page-link">4</a>
+                </li>
+                <li class="page-item">
+                    <a href="#" class="page-link">5</a>
+                </li>
+            </ul>
+            <select class="form-select">
+                <option>Ordenar pelo nome</option>
+                <option>Ordenar pelo menor preço</option>
+                <option>Ordenar pelo maior preço</option>
+            </select>
+        </div>
+    </main>
+
+    <footer class="container border-top mt-3 border-secondary-subtle">
+        <div class="row">
+            <div class="col-12 col-lg-4">
+                <p>2023 - Quitanda Online Ltda ME</p>
+                <p><i class="bi bi-geo-alt-fill text-danger"></i>Rua Virtual, Compulândia/PC</p>
+                <p>CNPJ 99999.9999999-09</p>
+            </div>
+            <div class="col-12 col-lg-4">
+                <p>Política de privacidade</p>
+                <p>Termos de uso</p>
+                <p>Quem somos</p>
+                <p>Trocas e Devoluções</p>
+            </div>
+            <div class="col-12 col-lg-4">
+                <p>Contato pelo site</p>
+                <p>email: quitanda@gmail.com</p>
+                <p>telefone: (18)37228756</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+
+</html>
